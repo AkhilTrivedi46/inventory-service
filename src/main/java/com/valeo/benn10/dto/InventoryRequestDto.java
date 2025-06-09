@@ -1,25 +1,13 @@
-package com.valeo.benn10.model;
+package com.valeo.benn10.dto;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@Table(name="invtry")
-@Entity
-public class InventoryModel {
-	@Id
+public class InventoryRequestDto {
+	
 	private int sku_id;
-	
-	@Column(name = "cloth_type", nullable = false)
 	private String cloth_type;
-	
-	@Column(name = "available_qty")
 	private int available_qty;
-	
-	
 	public int getSku_id() {
 		return sku_id;
 	}
@@ -40,10 +28,9 @@ public class InventoryModel {
 	}
 	@Override
 	public String toString() {
-		return "InventoryModel [sku_id=" + sku_id + ", cloth_type=" + cloth_type + ", available_qty=" + available_qty
-				+ "]";
+		return "InventoryRequestDto [sku_id=" + sku_id + ", cloth_type=" + cloth_type + ", available_qty="
+				+ available_qty + "]";
 	}
-	
 	
 	
 
